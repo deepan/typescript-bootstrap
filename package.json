@@ -1,0 +1,31 @@
+{
+  "name": "unit_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "pnpm run clean && esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=build/index.js && pnpm run declaration",
+    "declaration": "tsc",
+    "tests": "vitest --watch false --config ./vitest.config.ts",
+    "tests:watch": "npm run tests -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.15",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "esbuild": "^0.15.7",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.1"
+  }
+}
