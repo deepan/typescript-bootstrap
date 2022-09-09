@@ -35,3 +35,10 @@ prettier
 ```bash
 pnpm tsc --init
 ```
+
+## ATM Service
+
+Implement an atm service to allow users to withdraw money from their account.
+
+- User should be able to withdraw money from their account.
+- User should authenitcate them before withdrawing the money
